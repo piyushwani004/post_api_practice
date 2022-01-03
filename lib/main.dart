@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:post_api_practice/pages/Homepage.dart';
+import 'package:post_api_practice/pages/Providers/homePageProvider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Homepage(),
+      home: ChangeNotifierProvider(
+          create: (context) => HomePageProvider(), child: Homepage()),
     );
   }
 }

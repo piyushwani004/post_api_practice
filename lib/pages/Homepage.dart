@@ -19,6 +19,12 @@ class _HomepageState extends State<Homepage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Post REST Api with Provider"),
+      ),
+      body: Container(),
+    );
   }
 }

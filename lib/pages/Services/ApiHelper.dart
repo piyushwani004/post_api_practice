@@ -15,6 +15,7 @@ class APIHelper {
       var response = await get(Uri.parse(url));
       if (response.statusCode == 200) {
         var body = jsonDecode(response.body);
+        print("APIHelper Body:: $body");
         List<Post> postsList = [];
         body.forEach((e) {
           body.forEach((e) {
